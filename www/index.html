@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Hello World</title>
+</head>
+
+<body>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Kallat: Tablero Virtual</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Resetear</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="mainContainer">
+    <div class="Proyeccion">
+        <div class="contador mbottom">
+            <span class="label">Uno</span>
+            <div class="input-group number-spinner">
+              <span class="input-group-btn data-dwn">
+                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+              </span>
+                <p class="form-control text-center">0</p>
+                <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
+                <span class="input-group-btn data-up">
+                <button class="btn btn-default btn-info" data-dir="up"><span
+                        class="glyphicon glyphicon-plus"></span></button>
+              </span>
+            </div>
+        </div>
+        <div class="contador mbottom">
+            <span class="label">Dos</span>
+            <div class="input-group number-spinner">
+              <span class="input-group-btn data-dwn">
+                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+              </span>
+                <p class="form-control text-center">0</p>
+                <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
+                <span class="input-group-btn data-up">
+                <button class="btn btn-default btn-info" data-dir="up"><span
+                        class="glyphicon glyphicon-plus"></span></button>
+              </span>
+            </div>
+        </div>
+        <div class="contador mbottom">
+            <span class="label">Tres</span>
+            <div class="input-group number-spinner">
+              <span class="input-group-btn data-dwn">
+                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+              </span>
+                <p class="form-control text-center">0</p>
+                <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
+                <span class="input-group-btn data-up">
+                <button class="btn btn-default btn-info" data-dir="up"><span
+                        class="glyphicon glyphicon-plus"></span></button>
+              </span>
+            </div>
+        </div>
+        <div class="contador mbottom">
+            <span class="label">Cuatro</span>
+            <div class="input-group number-spinner">
+              <span class="input-group-btn data-dwn">
+                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+              </span>
+                <p class="form-control text-center">0</p>
+                <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
+                <span class="input-group-btn data-up">
+                <button class="btn btn-default btn-info" data-dir="up"><span
+                        class="glyphicon glyphicon-plus"></span></button>
+              </span>
+            </div>
+        </div>
+
+    </div>
+</div>
+<footer class="footer">
+    <div class="mainContainer">
+        <div class=" Hogueras">
+            <div class="contador">
+                <span class="label">PdV</span>
+                <div class="input-group number-spinner vida">
+                  <span class="input-group-btn data-dwn">
+                    <button class="btn btn-default btn-info" data-dir="dwn"><span
+                            class="glyphicon glyphicon-minus"></span></button>
+                  </span>
+                    <p class="form-control text-center PdVLabel" data-toggle="modal" data-target="#PdVModal">0</p>
+                    <input type="text" class="form-control dNone text-center PdV" value="0" min="0" max="0">
+                    <span class="input-group-btn data-up" >
+                    <button class="btn btn-default btn-info" data-dir="up" maxPdV><span
+                            class="glyphicon glyphicon-plus" ></span></button>
+                  </span>
+                </div>
+            </div>
+            <div class="contador">
+                <span class="label">PdE</span>
+                <div class="input-group number-spinner Ex">
+                  <span class="input-group-btn data-dwn">
+                    <button class="btn btn-default btn-info" data-dir="dwn"><span
+                            class="glyphicon glyphicon-minus"></span></button>
+                  </span>
+                    <p class="form-control text-center PdELabel" data-toggle="modal" data-target="#PdEModal">0</p>
+                    <input type="text" class="form-control dNone text-center PdE" value="0" min="0" max="0">
+                    <span class="input-group-btn data-up ">
+                    <button class="btn btn-default btn-info" data-dir="up" maxPdE><span
+                            class="glyphicon glyphicon-plus" ></span></button>
+                  </span>
+                </div>
+            </div>
+            <div class="bottomDiv"><p class="bottom">© Ro.Sa de los Vientos Studio 2016</p></div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade" id="PdVModal" tabindex="-1" role="dialog" aria-labelledby="PdVModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Nuevo total de puntos de Vida</h4>
+            </div>
+            <div class="modal-body">
+                <input type="number" class="form-control newPdV">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary savePdV" data-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="PdEModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Nuevo total de puntos de Existencia</h4>
+            </div>
+            <div class="modal-body">
+                <input type="number" class="form-control newPdE">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary savePdE" data-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
+
+</html>
