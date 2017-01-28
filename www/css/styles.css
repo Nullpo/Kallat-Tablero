@@ -87,6 +87,57 @@ body{
     display: none!important;
 }
 
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    font-size: 23px;
+    font-family: 'immortalregular';
+}
+
+.textContainer{
+	padding: 5px 20px;
+	font-family: 'immortalregular';
+}
+.textContainer p{
+	font-size: 20px;
+	font-family: 'immortalregular';
+	text-align: justify;
+}
+.bodyFix{
+	overflow: auto!important;
+}
+
+.BackButton{
+	background-color: black;
+    padding: 20px 40px;
+    margin: auto;
+    border-radius: 14px 14px 0px 0px;
+    font-size: 20px;
+    color: #8ea6bb;
+}
+.BackButton:hover{
+	background-color: black;
+    padding: 20px 40px;
+    margin: auto;
+    border-radius: 14px 14px 0px 0px;
+    font-size: 20px;
+    color: #8ea6bb;
+    text-decoration: none;
+}
+.buttonContainerCenter{
+	text-align: center;
+}
+
+.endDisclamer{
+	font-size: 16px!important;
+}
+
+.tutorialImage{
+    vertical-align: middle;
+    width: 100%;
+    border: black 2px solid;
+}
 
 /*   Number Containers   */
 
