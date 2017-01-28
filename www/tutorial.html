@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"/>
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Kallat: Tablero Virtual</title>
+</head>
+
+<body class="bodyFix">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Kallat: Tablero Virtual</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a onclick="softReload()">Resetear</a></li>
+                <li><a href="index.html">Volver al Tablero</a></li>
+                <li><a href="#" onclick="javascript:window.close();opener.window.focus();">Salir</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="mainContainer textContainer">
+  <div class="buttonContainerCenter"><h2>¡Hola Invocador!</h2></div>
+  <p>En este tablero podras llevar el conteo de lo que sucede durante la batalla, su uso es simple:</p>
+  <br>
+  <img src="img/000001.png" class="tutorialImage">
+  <p>En la parte superior encontraras los contadores de <b>Proyeccion</b>, con estos deberas mantener contabilizado el nivel de proyeccion restante de cada una de tus invocaciones, al llegar a 0 la invocacion no podra seguir luchando. Los diales ( + / - ) de los laterales de cada contador te permitiran sumar o restar los puntos de Proyeccion.</p>
+<br>
+<img src="img/000002.png" class="tutorialImage">
+  <p>Al final encontraras los contadores de tus <b>Hogueras</b>, con estas podras contabilizar la cantidad restante que tienes de <b>Vida y Existencia</b>. Similar a los contadores de Proyeccion podras usar los diales para subir y bajar los puntos de cada hoguera, aunque en este caso, como al invocar o retirar invocaciones el maximo de estas se ve alterado, tendras la opcion de tocar el centro del contador para abrir una pestaña donde modificar el maximo de tu <b>Hoguera</b>.</p>
+<br><br>
+
+<p class="endDisclamer">Este tablero es posible gracias al Invocador <b>Pablo Codeiro</b>.</p>
+
+<br><br>
+<div class="buttonContainerCenter"><a href="index.html" class="BackButton">Volver al Tablero</a></div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+<script>
+function softReload() {
+    location.reload();
+}
+</script>
+</body>
+
+</html>
