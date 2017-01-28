@@ -53,10 +53,9 @@
     <script src="./js/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Hello World</title>
+    <title>Kallat - Tablero Virtual</title>
 </head>
 
-<body>
 <body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -75,8 +74,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#">Resetear</a></li>
-                <li><a href="#">Salir</a></li>
+                <li><a onclick="softReload()">Resetear</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="#" onclick="javascript:window.close();opener.window.focus();">Salir</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -84,7 +84,7 @@
 <div class="mainContainer">
     <div class="Proyeccion">
         <div class="contador mbottom">
-            <span class="label">Uno</span>
+            <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Uno</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
                 <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
@@ -98,7 +98,7 @@
             </div>
         </div>
         <div class="contador mbottom">
-            <span class="label">Dos</span>
+            <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Dos</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
                 <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
@@ -112,7 +112,7 @@
             </div>
         </div>
         <div class="contador mbottom">
-            <span class="label">Tres</span>
+            <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Tres</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
                 <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
@@ -126,7 +126,7 @@
             </div>
         </div>
         <div class="contador mbottom">
-            <span class="label">Cuatro</span>
+            <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Cuatro</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
                 <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
@@ -146,7 +146,7 @@
     <div class="mainContainer">
         <div class=" Hogueras">
             <div class="contador">
-                <span class="label">PdV</span>
+                <span class="label"><span class="iconTitleSmall"><img src="img/vida.svg"></span>PdV</span>
                 <div class="input-group number-spinner vida">
                   <span class="input-group-btn data-dwn">
                     <button class="btn btn-default btn-info" data-dir="dwn"><span
@@ -161,7 +161,7 @@
                 </div>
             </div>
             <div class="contador">
-                <span class="label">PdE</span>
+                <span class="label"><span class="iconTitleSmall"><img src="img/existencia.svg"></span>PdE</span>
                 <div class="input-group number-spinner Ex">
                   <span class="input-group-btn data-dwn">
                     <button class="btn btn-default btn-info" data-dir="dwn"><span
@@ -186,7 +186,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Nuevo total de puntos de Vida</h4>
+                <h4 class="modal-title"><span class="iconTitle"><img src="img/vida.svg"></span> Limite de la Hoguera</h4>
             </div>
             <div class="modal-body">
                 <input type="number" class="form-control newPdV">
@@ -204,7 +204,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Nuevo total de puntos de Existencia</h4>
+                <h4 class="modal-title" id="myModalLabel"><span class="iconTitle"><img src="img/existencia.svg"></span> Limite de la Hoguera</h4>
             </div>
             <div class="modal-body">
                 <input type="number" class="form-control newPdE">
@@ -222,6 +222,11 @@
 <script type="text/javascript" src="./js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
+</script>
+<script>
+function softReload() {
+    location.reload();
+}
 </script>
 </body>
 
