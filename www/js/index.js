@@ -39,7 +39,6 @@ var app = {
         app.receivedEvent('deviceready');
         $(function () {
                 $(".savePdV").click(function () {
-                    alert(isNaN(parseInt($(".newPdV").val())));
                     if(isNaN(parseInt($(".newPdV").val()))) {
                         $(".newPdV").val($(".PdV").val());
                         return;
