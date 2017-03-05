@@ -33,11 +33,18 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
+        if(window.MobileAccessibility){
+            window.MobileAccessibility.usePreferredTextZoom(false);
+        }
         app.receivedEvent('deviceready');
         $(function () {
-                console.log("Botones: ", $(".number-spinner button"));
-
                 $(".savePdV").click(function () {
+                    alert(isNaN(parseInt($(".newPdV").val())));
+                    if(isNaN(parseInt($(".newPdV").val()))) {
+                        $(".newPdV").val($(".PdV").val());
+                        return;
+                    }
+
                     var max = parseInt($(".newPdV").val());
                     var oldMax = parseInt($(".PdV").attr("max"));
                     var val = parseInt($(".PdV").val());
@@ -49,9 +56,15 @@ var app = {
                     $(".PdVLabel").text(newVar);
 
                     if(parseInt($(".PdV").val()) < max) $("[maxPdV]").removeAttr("disabled");
+                    if(parseInt($(".PdV").val()) > 0) $("[minPdV]").removeAttr("disabled");
                 });
 
                 $(".savePdE").click(function () {
+                    if(isNaN(parseInt($(".newPdE").val()))) {
+                        $(".newPdV").val($(".PdE").val());
+                        return;
+                    }
+
                     var max = parseInt($(".newPdE").val());
                     var oldMax = parseInt($(".PdE").attr("max"));
                     var val = parseInt($(".PdE").val());
@@ -64,10 +77,11 @@ var app = {
 
 
                     if(parseInt($(".PdE").val()) < max) $("[maxPdE]").removeAttr("disabled");
+                    if(parseInt($(".PdE").val()) > 0) $("[minPdE]").removeAttr("disabled");
+
                 });
 
-                $(".number-spinner button").click(function () {
-                    console.log("Hizo click!");
+                $(".number-spinner button").on('touchstart', function () {
                     var btn = $(this);
                     var input = btn.closest('.number-spinner').find('input');
                     var p = btn.closest('.number-spinner').find('p');
@@ -99,13 +113,6 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
-        /*var parentElement = document.getElementById(id);
-         var listeningElement = parentElement.querySelector('.listening');
-         var receivedElement = parentElement.querySelector('.received');
-
-         listeningElement.setAttribute('style', 'display:none;');
-         receivedElement.setAttribute('style', 'display:block;');
-         */
         console.log('Received Event: ' + id);
     }
 };

@@ -87,7 +87,8 @@
             <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Uno</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
-                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                <button class="btn btn-default btn-info" data-dir="dwn" disabled><span
+                        class="glyphicon glyphicon-minus"></span></button>
               </span>
                 <p class="form-control text-center">0</p>
                 <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
@@ -101,7 +102,8 @@
             <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Dos</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
-                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                <button class="btn btn-default btn-info" data-dir="dwn" disabled><span
+                        class="glyphicon glyphicon-minus"></span></button>
               </span>
                 <p class="form-control text-center">0</p>
                 <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
@@ -115,7 +117,8 @@
             <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Tres</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
-                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                <button class="btn btn-default btn-info" data-dir="dwn" disabled><span
+                        class="glyphicon glyphicon-minus"></span></button>
               </span>
                 <p class="form-control text-center">0</p>
                 <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
@@ -129,7 +132,8 @@
             <span class="label"><span class="iconTitleSmall"><img src="img/Proyeccion.svg"></span>Cuatro</span>
             <div class="input-group number-spinner">
               <span class="input-group-btn data-dwn">
-                <button class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                <button class="btn btn-default btn-info" data-dir="dwn" disabled><span
+                        class="glyphicon glyphicon-minus"></span></button>
               </span>
                 <p class="form-control text-center">0</p>
                 <input type="text" class="form-control dNone text-center" value="0" min="0" max="7">
@@ -142,6 +146,8 @@
 
     </div>
 </div>
+
+<!-- Parte de abajo: PdV y PdE -->
 <footer class="footer">
     <div class="mainContainer">
         <div class=" Hogueras">
@@ -149,14 +155,14 @@
                 <span class="label"><span class="iconTitleSmall"><img src="img/vida.svg"></span>PdV</span>
                 <div class="input-group number-spinner vida">
                   <span class="input-group-btn data-dwn">
-                    <button class="btn btn-default btn-info" data-dir="dwn"><span
+                    <button class="btn btn-default btn-info" data-dir="dwn" minPdV disabled><span
                             class="glyphicon glyphicon-minus"></span></button>
                   </span>
                     <p class="form-control text-center PdVLabel" data-toggle="modal" data-target="#PdVModal">0</p>
                     <input type="text" class="form-control dNone text-center PdV" value="0" min="0" max="0">
-                    <span class="input-group-btn data-up" >
-                    <button class="btn btn-default btn-info" data-dir="up" maxPdV><span
-                            class="glyphicon glyphicon-plus" ></span></button>
+                    <span class="input-group-btn data-up">
+                    <button class="btn btn-default btn-info" data-dir="up" maxPdV disabled><span
+                            class="glyphicon glyphicon-plus"></span></button>
                   </span>
                 </div>
             </div>
@@ -164,14 +170,14 @@
                 <span class="label"><span class="iconTitleSmall"><img src="img/existencia.svg"></span>PdE</span>
                 <div class="input-group number-spinner Ex">
                   <span class="input-group-btn data-dwn">
-                    <button class="btn btn-default btn-info" data-dir="dwn"><span
-                            class="glyphicon glyphicon-minus"></span></button>
+                    <button class="btn btn-default btn-info" data-dir="dwn" minPdE disabled>
+                        <span class="glyphicon glyphicon-minus"></span></button>
                   </span>
                     <p class="form-control text-center PdELabel" data-toggle="modal" data-target="#PdEModal">0</p>
                     <input type="text" class="form-control dNone text-center PdE" value="0" min="0" max="0">
                     <span class="input-group-btn data-up ">
-                    <button class="btn btn-default btn-info" data-dir="up" maxPdE><span
-                            class="glyphicon glyphicon-plus" ></span></button>
+                    <button class="btn btn-default btn-info" data-dir="up" maxPdE disabled><span
+                            class="glyphicon glyphicon-plus"></span></button>
                   </span>
                 </div>
             </div>
@@ -186,7 +192,8 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title"><span class="iconTitle"><img src="img/vida.svg"></span> Limite de la Hoguera</h4>
+                <h4 class="modal-title"><span class="iconTitle"><img src="img/vida.svg"></span> Limite de la Hoguera
+                </h4>
             </div>
             <div class="modal-body">
                 <input type="number" class="form-control newPdV">
@@ -204,7 +211,8 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel"><span class="iconTitle"><img src="img/existencia.svg"></span> Limite de la Hoguera</h4>
+                <h4 class="modal-title" id="myModalLabel"><span class="iconTitle"><img src="img/existencia.svg"></span>
+                    Limite de la Hoguera</h4>
             </div>
             <div class="modal-body">
                 <input type="number" class="form-control newPdE">
@@ -224,9 +232,9 @@
     app.initialize();
 </script>
 <script>
-function softReload() {
-    location.reload();
-}
+    function softReload() {
+        location.reload();
+    }
 </script>
 </body>
 
