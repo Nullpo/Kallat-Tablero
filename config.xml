@@ -7,7 +7,6 @@
     <author email="pablocodeiro@gmail.com" href="http://phonegap.com">
         Refactory S.H.
     </author>
-    <preference name="phonegap-version" value="cli-6.1.0" />
     <preference name="windows-appx-target" value="uap" />
     <preference name="permissions" value="none" />
     <content src="index.html" />

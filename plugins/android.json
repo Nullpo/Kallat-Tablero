@@ -66,6 +66,9 @@
         },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "phonegap-plugin-mobile-accessibility": {
+            "PACKAGE_NAME": "com.phonegap.kallat"
         }
     },
     "dependent_plugins": {}

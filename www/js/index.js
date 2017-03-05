@@ -33,13 +33,18 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
-        if(window.MobileAccessibility){
+        var hoguerasInicializadas = {
+            PdV: false,
+            PdE: false
+        };
+
+        if (window.MobileAccessibility) {
             window.MobileAccessibility.usePreferredTextZoom(false);
         }
         app.receivedEvent('deviceready');
         $(function () {
                 $(".savePdV").click(function () {
-                    if(isNaN(parseInt($(".newPdV").val()))) {
+                    if (isNaN(parseInt($(".newPdV").val()))) {
                         $(".newPdV").val($(".PdV").val());
                         return;
                     }
@@ -54,12 +59,14 @@ var app = {
                     $(".PdV").val(newVar);
                     $(".PdVLabel").text(newVar);
 
-                    if(parseInt($(".PdV").val()) < max) $("[maxPdV]").removeAttr("disabled");
-                    if(parseInt($(".PdV").val()) > 0) $("[minPdV]").removeAttr("disabled");
+                    if (parseInt($(".PdV").val()) < max) $("[maxPdV]").removeAttr("disabled");
+                    if (parseInt($(".PdV").val()) > 0) $("[minPdV]").removeAttr("disabled");
+
+                    hoguerasInicializadas.PdV = true;
                 });
 
                 $(".savePdE").click(function () {
-                    if(isNaN(parseInt($(".newPdE").val()))) {
+                    if (isNaN(parseInt($(".newPdE").val()))) {
                         $(".newPdV").val($(".PdE").val());
                         return;
                     }
@@ -75,9 +82,9 @@ var app = {
                     $(".PdELabel").text(newVar);
 
 
-                    if(parseInt($(".PdE").val()) < max) $("[maxPdE]").removeAttr("disabled");
-                    if(parseInt($(".PdE").val()) > 0) $("[minPdE]").removeAttr("disabled");
-
+                    if (parseInt($(".PdE").val()) < max) $("[maxPdE]").removeAttr("disabled");
+                    if (parseInt($(".PdE").val()) > 0) $("[minPdE]").removeAttr("disabled");
+                    hoguerasInicializadas.PdE = true;
                 });
 
                 $(".number-spinner button").on('touchstart', function () {
@@ -106,7 +113,24 @@ var app = {
                             btn.prop("disabled", true);
                         }
                     }
+                    checkIfLose();
                 });
+
+
+                function checkIfLose() {
+                    var PdV = $(".PdV").val();
+                    var PdE = $(".PdE").val();
+                    if (hoguerasInicializadas.PdV && hoguerasInicializadas.PdE) {
+                        if (PdV == 0) {
+                            navigator.notification.alert("Tu Hoguera de Vida se ha consumido", null, "¡Has sido Derrotado!")
+                        }
+
+                        if (PdE == 0) {
+                            navigator.notification.alert("Tu Hoguera Existencia se ha consumido", null, "¡Has sido Derrotado!");
+                        }
+                    }
+
+                }
             }
         );
     },
