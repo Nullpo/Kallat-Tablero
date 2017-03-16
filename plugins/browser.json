@@ -16,9 +16,6 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.phonegap.kallat"
         },
-        "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "com.phonegap.kallat"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.phonegap.kallat"
         },
@@ -35,9 +32,6 @@
             "PACKAGE_NAME": "com.phonegap.kallat"
         },
         "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.phonegap.kallat"
-        },
-        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.phonegap.kallat"
         },
         "cordova-plugin-globalization": {

@@ -13,9 +13,6 @@
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-contacts": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
@@ -53,9 +50,6 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-globalization": {
