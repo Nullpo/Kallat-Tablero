@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
@@ -34,25 +31,13 @@
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-vibration": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
         "cordova-plugin-battery-status": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-media-capture": {
-            "PACKAGE_NAME": "com.phonegap.helloworld"
-        },
-        "cordova-plugin-globalization": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-media": {
@@ -62,6 +47,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "phonegap-plugin-mobile-accessibility": {
+            "PACKAGE_NAME": "com.phonegap.kallat"
+        },
+        "cordova-plugin-globalization": {
             "PACKAGE_NAME": "com.phonegap.kallat"
         }
     },
