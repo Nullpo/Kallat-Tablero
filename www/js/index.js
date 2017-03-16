@@ -53,7 +53,7 @@ var app = {
                     var oldMax = parseInt($(".PdV").attr("max"));
                     var val = parseInt($(".PdV").val());
 
-                    var newVar = val + (max - oldMax);
+                    var newVar = Math.max(0, val + (max - oldMax));
 
                     $(".PdV").attr('max', max);
                     $(".PdV").val(newVar);
@@ -61,7 +61,7 @@ var app = {
 
                     if (parseInt($(".PdV").val()) < max) $("[maxPdV]").removeAttr("disabled");
                     if (parseInt($(".PdV").val()) > 0) $("[minPdV]").removeAttr("disabled");
-
+                    checkIfLose()
                     hoguerasInicializadas.PdV = true;
                 });
 
@@ -75,7 +75,7 @@ var app = {
                     var oldMax = parseInt($(".PdE").attr("max"));
                     var val = parseInt($(".PdE").val());
 
-                    var newVar = val + (max - oldMax);
+                    var newVar = Math.max(0, val + (max - oldMax));
 
                     $(".PdE").attr('max', max);
                     $(".PdE").val(newVar);
@@ -84,6 +84,8 @@ var app = {
 
                     if (parseInt($(".PdE").val()) < max) $("[maxPdE]").removeAttr("disabled");
                     if (parseInt($(".PdE").val()) > 0) $("[minPdE]").removeAttr("disabled");
+
+                    checkIfLose()
                     hoguerasInicializadas.PdE = true;
                 });
 
@@ -97,7 +99,7 @@ var app = {
                     if (btn.attr('data-dir') == 'up') {
                         if (input.attr('max') == undefined || parseInt(input.val()) < parseInt(input.attr('max'))) {
                             input.val(parseInt(input.val()) + 1);
-                            p.text(input.val());
+                            p.text(Math.max(0, input.val()));
                         }
 
                         if (input.attr('max') <= parseInt(input.val())) {
@@ -106,7 +108,7 @@ var app = {
                     } else {
                         if (input.attr('min') == undefined || parseInt(input.val()) > parseInt(input.attr('min'))) {
                             input.val(parseInt(input.val()) - 1);
-                            p.text(input.val());
+                            p.text(Math.max(0, input.val()));
                         }
 
                         if (input.attr('min') >= parseInt(input.val())) {
