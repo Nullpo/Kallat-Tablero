@@ -1,0 +1,375 @@
+/*   Fonts   */
+@font-face {
+    font-family: 'blackchanceryregular';
+    src: url('fonts/blkchcry-webfont.eot');
+    src: url('fonts/blkchcry-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/blkchcry-webfont.woff2') format('woff2'),
+    url('fonts/blkchcry-webfont.woff') format('woff'),
+    url('fonts/blkchcry-webfont.ttf') format('truetype'),
+    url('fonts/blkchcry-webfont.svg#blackchanceryregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'immortalregular';
+    src: url('fonts/immortal-webfont.eot');
+    src: url('fonts/immortal-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/immortal-webfont.woff') format('woff'),
+    url('fonts/immortal-webfont.ttf') format('truetype'),
+    url('fonts/immortal-webfont.svg#immortalregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*   Global CLasses   */
+
+body{
+    background-image: url("../img/bkg.jpg");
+    background-size: initial;
+    overflow: hidden;
+}
+
+.mainContainer{
+    max-width: 600px;
+    margin:auto;
+}
+
+.navbar-default {
+    background-color: #1d1d1d;
+    border-color: #000000;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: #f2eadb;
+    background-image: none;
+    border: #cdad9c;
+    border-radius: 4px;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #ddd;
+}
+
+.navbar-default .navbar-brand {
+    color: #efe0d2;
+    font-family: 'immortalregular';
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ecddcb;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #eae2d2;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+    color: #eee6d7;
+    background-color: transparent;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+}
+
+.dNone{
+    display: none!important;
+}
+
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    font-size: 23px;
+    font-family: 'immortalregular';
+}
+
+.textContainer{
+	padding: 5px 20px;
+	font-family: 'immortalregular';
+}
+.textContainer p{
+	font-size: 20px;
+	font-family: 'immortalregular';
+	text-align: justify;
+}
+.bodyFix{
+	overflow: auto!important;
+}
+
+.BackButton{
+	background-color: black;
+    padding: 20px 40px;
+    margin: auto;
+    border-radius: 14px 14px 0px 0px;
+    font-size: 20px;
+    color: #8ea6bb;
+}
+.BackButton:hover{
+	background-color: black;
+    padding: 20px 40px;
+    margin: auto;
+    border-radius: 14px 14px 0px 0px;
+    font-size: 20px;
+    color: #8ea6bb;
+    text-decoration: none;
+}
+.buttonContainerCenter{
+	text-align: center;
+}
+
+.endDisclamer{
+	font-size: 16px!important;
+}
+
+.tutorialImage{
+    vertical-align: middle;
+    width: 100%;
+    border: black 2px solid;
+}
+
+/*   Number Containers   */
+
+.shield{
+    width: 48%;
+    float: left;
+}
+
+.mainNumber{
+    width: 48%;
+    float: left;
+    background: transparent;
+    border: 0;
+    font-size: 60px;
+    text-align: center;
+    color: black;
+}
+
+.contador{
+    width: 48%;
+    margin: 0 1%;
+    overflow: hidden;
+    float: left;
+}
+
+.label{
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'immortalregular';
+    color: black;
+    font-weight: normal;
+}
+
+.space{
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.center{
+    margin:auto;
+    width: 50%;
+    overflow: hidden;
+}
+
+.backSlide{
+    background: transparent;
+    width: 50%;
+    float: left;
+}
+
+.backSlide img{
+    width: 75%;
+    margin-left: 20%;
+}
+
+.NextSlide{
+    background: transparent;
+    width: 50%;
+    float: left;
+}
+
+.NextSlide img{
+    width: 75%;
+    margin-right: 20%;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #232323;
+    border-color: #000000;
+    height: 80px;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #232323;
+    border-color: #000000;
+}
+
+.btn-info.disabled.focus, .btn-info.disabled:focus, .btn-info.disabled:hover, .btn-info[disabled].focus, .btn-info[disabled]:focus, .btn-info[disabled]:hover, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info:hover {
+    background-color: #232323;
+    border-color: #000000;
+}
+
+.btn-info.active, .btn-info:active, .open>.dropdown-toggle.btn-info,
+.btn-info.focus, .btn-info:focus,.btn-info.active.focus, .btn-info.active:focus, .btn-info.active:hover, .btn-info:active.focus, .btn-info:active:focus, .btn-info:active:hover, .open>.dropdown-toggle.btn-info.focus, .open>.dropdown-toggle.btn-info:focus, .open>.dropdown-toggle.btn-info:hover {
+    color: #fff;
+    background-color: #232323;
+    border-color: #000000;
+    outline: none;
+}
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    font-size: 60px;
+    background-image: url(../img/Proyeccion.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 40%;
+    font-family: 'immortalregular';
+    color: black;
+    padding: 0px;
+}
+
+.vida .form-control {
+    background-image: url(../img/bkgVida.png), url(../img/vida.svg);
+    background-size: cover, contain;
+}
+
+.Ex .form-control {
+    background-image: url(../img/bkgEx.png), url(../img/existencia.svg);
+    background-size: cover, contain;
+}
+
+.vida .btn-info {
+    color: #fff;
+    background-color: #560c0c;
+    border-color: #5d1818;
+    height: 80px;
+}
+
+.Ex .btn-info {
+    color: #fff;
+    background-color: #233765;
+    border-color: #212056;
+    height: 80px;
+}
+
+.mbottom{
+    margin-bottom: 10px;
+}
+
+.bottomDiv{
+    float: left;
+    width: 100%;
+}
+
+.bottom{
+    font-size: 10px;
+    margin-top: 20px;
+    font-family: 'immortalregular';
+    text-align: center;
+}
+
+/*   Shadow Box Shit   */
+
+.modal-content {
+    font-family: 'immortalregular';
+    background-image: url("../img/bkg.jpg");
+    background-size: cover;
+
+}
+
+.modal-content .btn-primary {
+    background-color: #232323;
+    border-color: #232323;
+    padding: 20px;
+}
+
+.modal-content .btn-default {
+    padding: 20px;
+}
+
+.iconTitle img{
+	width: 50px;
+}
+
+.iconTitleSmall img{
+	width: 28px;
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 0;
+}
+
+.modal-header .close {
+    margin-top: -2px;
+    display: none;
+}
+
+#PdVModal input{
+    color: black;
+    font-weight: bold;
+    background-color: #fff8f8;
+	background-image: url(../img/bkgVida.png);
+	background-size: cover, contain;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+#PdEModal input{
+    color: black;
+    font-weight: bold;
+    background-color: #d3dbe2;
+	background-image: url(../img/bkgEx.png);
+	background-size: cover, contain;
+    height: 70px;
+    width: 80%;
+    margin: auto;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+/*   Responsive Shit   */
+
+@media (max-width: 500px) {
+    .input-group .form-control {
+        background-image: none;
+        padding-left:0;
+    }
+    .vida .form-control {
+        background-image: url(../img/bkgVida.png);
+        background-size: cover, contain;
+    }
+    .Ex .form-control {
+        background-image: url(../img/bkgEx.png);
+        background-size: cover, contain;
+    }
+}
